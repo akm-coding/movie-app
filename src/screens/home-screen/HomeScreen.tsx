@@ -163,6 +163,7 @@ const HomeScreen = ({navigation}: any) => {
         data={popularMoviesList}
         keyExtractor={(item: any) => item.id}
         horizontal
+        showsHorizontalScrollIndicator={false}
         bounces={false}
         contentContainerStyle={styles.containerGap36}
         renderItem={({item, index}) => (
@@ -182,6 +183,7 @@ const HomeScreen = ({navigation}: any) => {
       <CategoryHeader title={'Upcoming'} />
       <FlatList
         data={upcomingMoviesList}
+        showsHorizontalScrollIndicator={false}
         keyExtractor={(item: any) => item.id}
         horizontal
         bounces={false}

@@ -11,6 +11,6 @@ export const searchMovies = (keyword:string) => {
 export const movieDetails = (id:number) => {
     return `https://api.themoviedb.org/3/movie/${id}?api_key=${apikey}`
 }
-export const moviecastDetails = (id:number) => {
+export const movieCastDetails = (id:number) => {
     return `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${apikey}`
 }
