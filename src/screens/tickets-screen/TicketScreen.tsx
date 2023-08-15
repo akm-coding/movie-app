@@ -1,18 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import {
-  Text,
-  View,
-  StyleSheet,
-  StatusBar,
-  ImageBackground,
-  Image,
-} from 'react-native';
+import {Text, View, StatusBar, ImageBackground, Image} from 'react-native';
 import EncryptedStorage from 'react-native-encrypted-storage';
 import AppHeader from '../../components/app-header/AppHeader';
 import styles from './styles';
 import LinearGradient from 'react-native-linear-gradient';
 import CustomIcon from '../../components/icons/CustomIcon';
-import { COLORS } from '../../theme/theme';
+import {COLORS} from '../../theme/theme';
 
 const TicketScreen = ({navigation, route}: any) => {
   const [ticketData, setTicketData] = useState<any>(route.params);
@@ -130,6 +123,5 @@ const TicketScreen = ({navigation, route}: any) => {
     </View>
   );
 };
-
 
 export default TicketScreen;
