@@ -1,0 +1,22 @@
+  stage: deploy
+  before_script:
+    - npm install
+  tags:
+    - rnbuild
+  after_script:
+    - cp $OUTPUT_PATH.$FILE_TYPE $CI_PROJECT_NAME-$CI_COMMIT_REF_NAME.$FILE_TYPE
+  artifacts:
+    name: "$CI_PROJECT_NAME-$PLATFORM-$CI_COMMIT_REF_NAME"
+    paths:
+    - $CI_PROJECT_NAME-$CI_COMMIT_REF_NAME.$FILE_TYPE
+    expire_in: 7 days
+  when: manual
+
+deploy:android:prod:
+  variables:
+    PLATFORM: android
+    FILE_TYPE: apk
+    OUTPUT_PATH: android/app/build/outputs/apk/app-release
+  <<: *job_deploy
+  script:
+    - cd android && ./gradlew assembleRelease
