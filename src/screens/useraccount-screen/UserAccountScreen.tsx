@@ -24,25 +24,25 @@ const UserAccountScreen = ({navigation}: any) => {
       </View>
       <View style={styles.profileContainer}>
         <SettingsComponent
-          icon='user'
+          icon="user"
           heading="Account"
-          subheading="Edit Profile"
+          subheading="Edit Profile Detail"
           subtitle="Change Password"
         />
         <SettingsComponent
-          icon='setting'
+          icon="setting"
           heading="Settings"
           subheading="Theme"
           subtitle="Permissions"
         />
         <SettingsComponent
-          icon='dollar'
+          icon="dollar"
           heading="Offers & Refferals"
           subheading="Offer"
           subtitle="Refferals"
         />
         <SettingsComponent
-          icon='info'
+          icon="info"
           heading="About"
           subheading="About Movies"
           subtitle="More"
